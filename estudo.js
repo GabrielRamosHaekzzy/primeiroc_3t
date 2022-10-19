@@ -39,3 +39,17 @@ function escreva(){
      }
      document.write("Resultado "+r);
  }
+function media(){
+    let v1 = document.getElementById("v1").value;
+    let v2 = document.getElementById("v2").value;
+    let v3 = document.getElementById("v3").value;
+    let r = (Number(v1)+Number(v2)+Number(v3))/3;
+    document.getElementById("resultado").innerHTML = "Média: " = r;
+}
+function menos(){
+    let v1 = document.getElementById("v1").value;
+    let v2 = document.getElementById("v2").value;
+    let v3 = document.getElementById("v3").value;
+    let r = (Number(v1)-Number(v2)-Number(v3));
+    document.getElementById("resultado").innerHTML = "Subtração: " = r;
+}
