@@ -1,0 +1,37 @@
+#calculadora {
+    background-color: rgb(44, 44, 44);
+    color: rgb(199, 199, 199);
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+}
+#calculadora input {
+    background: rgb(63, 63, 63);
+    color: white;
+    border-radius: 12px;
+    padding: 3px;
+}
+#calculadora button {
+    background: rgb(63, 63, 63);
+    color: white;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#calculadora button:hover{
+    background: grey;
+    color: black;
+    cursor: pointer;
+}
+#sptotal {
+    background: rgb(63, 63, 63);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 3px;
+}
+.splista {
+    background-color: black;
+    border-radius: 7px;
+    color: rgb(199, 199, 199);
+}

@@ -1,55 +1,49 @@
-let tabuada = 1;
 
-function escreva(){
-    document.write(tabuada + " x 1 =  " + (tabuada*1) + "<br>");
-    document.write(tabuada + " x 2 =  " + (tabuada*2) + "<br>");
-    document.write(tabuada + " x 3 =  " + (tabuada*3) + "<br>");
-    document.write(tabuada + " x 4 =  " + (tabuada*4) + "<br>");
-    document.write(tabuada + " x 5 =  " + (tabuada*5) + "<br>");
-    document.write(tabuada + " x 6 =  " + (tabuada*6) + "<br>");
-    document.write(tabuada + " x 7 =  " + (tabuada*7) + "<br>");
-    document.write(tabuada + " x 8 =  " + (tabuada*8) + "<br>");
-    document.write(tabuada + " x 9 =  " + (tabuada*9) + "<br>");
-    document.write(tabuada + " x 10 =  " + (tabuada*10) + "<br>");
+function moeda(atual) {
+  return atual.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 }
 
- function minhaTabuada(){
-     for(let i = 1; i <= 100; i++){
-         document.write("Tabuada do " + i + "<br>");
-         for(let j = 1; j <= 10; j++){
-            document.write(i + " x " + j + " = " + (j*i) + "<br>");
-         }
-         document.write("<br>");
-     }
- }
+function total() {
+  let c = document.getElementById("valor").value;
+  let j = document.getElementById("juros").value;
+  let t = document.getElementById("meses").value;
+  let r = moeda;
 
- function cubo(){
-     for(let i = 20; i >= 2; i--){
-         document.write("O cubo de " + i + " é " + i + " x " + i + " x " + i + " = " + (i*i*i)+"<br>")
-     }
- }
- function mat(){
-     let v = document.getElementById("valor").value;
-     let j = document.getElementById("juros").value;
-     let t = document.getElementById("meses").value;
-     let r = 0;
-     for(let i = 1; i<=t; i++){
-         r = v * (1+ (j/100));
-         v = r;
-     }
-     document.write("Resultado "+r);
- }
-function media(){
-    let v1 = document.getElementById("v1").value;
-    let v2 = document.getElementById("v2").value;
-    let v3 = document.getElementById("v3").value;
-    let r = (Number(v1)+Number(v2)+Number(v3))/3;
-    document.getElementById("resultado").innerHTML = "Média: " = r;
+
+  if (!Number(c)) {
+
+    alert("O capital deve ser numeros.");
+    document.getElementById("valor").value = "";
+    document.getElementById("valor").focus();
+    return;
+  }
+
+  if (!Number(j)) {
+    alert("O juros deve ser numeros.");
+    document.getElementById("juros").value = "";
+    document.getElementById("juros").focus();
+    return;
+  }
+
+  if (!Number(t)) {
+    alert("O meses deve ser numeros.");
+    document.getElementById("meses").value = "";
+    document.getElementById("meses").focus();
+    return;
+  }
+  let mes = "";
+
+  for (let i = 1; i <= t; i++) {
+    r = c * (1 + (j / 100));
+    mes += "Mês " + i + " valor: " + moeda(r) + "<br>";
+    //document.write("Mês " + i + " valor: " + moeda(r) + "<br>");
+    c = r;
+  }
+  document.getElementById("mes").innerHTML=mes;
+  
+  document.getElementById("total").innerHTML="Total: "+moeda(r);
+  //document.write("Resultado: " + moeda(r));
 }
-function menos(){
-    let v1 = document.getElementById("v1").value;
-    let v2 = document.getElementById("v2").value;
-    let v3 = document.getElementById("v3").value;
-    let r = (Number(v1)-Number(v2)-Number(v3));
-    document.getElementById("resultado").innerHTML = "Subtração: " = r;
-}
+
+
+

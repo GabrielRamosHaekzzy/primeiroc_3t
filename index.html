@@ -2,35 +2,39 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro C</title>
-    <script src="estudo.js"></script>
-    <link rel="stylesheet" href="estudo.js">
-
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Primeiro C</title>
+   <script src="estudo.js"></script>
+   <link rel="stylesheet" href="geral.css">
 </head>
 
 <body>
-    <div class="calc">
-        <span id="totalgeral">Total: 0,00</span><br>
 
-        Valor: <input id="valor" placeholder="R$" type="text"><br>
-        Juros mensais:<input id="juros" placeholder="%" type="juros"><br>
-        Nr meses:<input id="meses" placeholder="tempo" type="text"><br>
-        <button onclick="mat()">Enviar</button>
+   <div id="calculadora">
+      <div id="sptotal">
+         <span id="total">Total: 0,00</span><br>
+      </div>
+      Capital: <input id="valor" type="text"> <br>
+      Juros Mensais: <input id="juros" type="text"> <br>
+      Nr. de Meses: <input id="meses" type="text"> <br>
+      <button onclick="total()">Calcula</button>
+   </div>
+   <div class="splista">
+      <span id="mes">Meses</span>
+   </div>
 
-        <br><br><br><br>
-        <span id="resultado">0,00</span>
-        Valor 1: <input id="v1" type="text"><br>
-        Valor 2: <input id="v2" type="text"><br>
-        Valor 3: <input id="v3" type="text"><br>
-        <button onclick="media()">Média</button>
-        <button onclick="menos()">Subtração</button><br>
 
-        <span id="tempo">Mês a mês</span>
-
-    </div>
+   <br><br><br>
+   <span id="resultado"></span><br><br>
+   valor 1: <input id="v1" type="text"><br>
+   valor 2: <input id="v2" type="text"><br>
+   <button onclick="adicao()">Soma</button>
+   <button onclick="subtracao()">Subtração</button>
+   <button onclick="divisao()">Divisão</button>
+   <button onclick="multiplicacao()">Multiplicação</button>
+   <button onclick="porcentagem()">Porcentagem</button>
 </body>
 
 </html>
