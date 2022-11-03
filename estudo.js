@@ -45,5 +45,10 @@ function total() {
   //document.write("Resultado: " + moeda(r));
 }
 
-
-
+function limpar(){
+  document.getElementById("mes").innerHTML = "";
+  document.getElementById("total").innerHTML = "0,00";
+  document.getElementById("valor").value = "";
+  document.getElementById("juros").value = "";
+  document.getElementById("meses").value = ""; 
+}
