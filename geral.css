@@ -3,19 +3,24 @@ body {
 }
 #calculadora {
     background: rgb(77, 77, 77);
+    color: rgb(0, 0, 0);
     width: 200px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 10px 10px rgb(23, 23, 23);
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 15%;
 }
 #calculadora input {
     background: rgb(24, 24, 24);
-    color: rgb(255, 255, 255);
+    color: rgb(211, 206, 255);
     border-radius: 10px;
     padding: 5px;
+}
+#calculadora input:focus {
+    background: rgb(48, 48, 48);
+    color: rgb(211, 206, 255);
 }
 #calculadora button {
     background: rgb(0, 0, 0);
@@ -45,10 +50,67 @@ body {
 }
 .calcF {
     display: none;
+    color: rgb(200, 200, 200)
 }
 #calcFin:checked + #calculadora .calcF {
     display: block;
 }
 #calcFin {
+    display: none;
+}
+#calculadoraESG {
+    background: rgb(77, 77, 77);
+    color: rgb(0, 0, 0);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(23, 23, 23);
+    position: absolute;
+    left: 50%;
+    top: 15%;
+}
+#calculadoraESG input {
+    background: rgb(24, 24, 24);
+    color: rgb(211, 206, 255);
+    border-radius: 10px;
+    padding: 5px;
+}#calculadoraESG input:focus {
+    background: rgb(48, 48, 48);
+    color: rgb(211, 206, 255);
+}
+#calculadoraESG button {
+    background: rgb(0, 0, 0);
+    color: white;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+#calculadoraESG button:hover{
+    background: rgb(114, 87, 91);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+#spraiz {
+    background: black;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.spLista {
+    background: rgb(233, 213, 233);
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: red;
+    width: 200px;
+}
+.calcE {
+    display: none;
+    color: rgb(200, 200, 200)
+}
+#calcESG:checked + #calculadora .calcE {
+    display: block;
+}
+#calcESG {
     display: none;
 }
